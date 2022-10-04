@@ -5,6 +5,7 @@ import Burgar from "./componetn/Pages/Burgar";
 import Cart from "./componetn/Pages/Cart";
 import Drink from "./componetn/Pages/Drink";
 import Home from "./componetn/Pages/Home";
+import LogIn from "./componetn/Pages/Login";
 import Orders from "./componetn/Pages/Orders";
 import Pizzas from "./componetn/Pages/Pizzas";
 import Thai from "./componetn/Pages/Thai";
@@ -64,7 +65,9 @@ function App() {
           }
         />
         <Route path="/cart" element={<Cart />} />
+
         <Route path="/foodDetail" element={<FoodDetails />} />
+        <Route path="/Login" element={<LogIn />} />
       </Routes>
     </div>
   );

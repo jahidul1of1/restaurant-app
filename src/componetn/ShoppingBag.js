@@ -1,6 +1,7 @@
 import {
   faBagShopping,
   faDollar,
+  faEquals,
   faMinus,
   faPlus
 } from "@fortawesome/free-solid-svg-icons";
@@ -18,8 +19,13 @@ const ShoppingBag = ({ handleShowBag }) => {
     cartCounter,
     removeToCart,
   } = useContext(FoodContext);
-const {pathname} = useLocation();
-const navigate =  useNavigate();
+
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const totalAmount = cartItems.reduce(
+                (sum, item) => sum + item.price * item.quantity.length,
+                0
+              )
   return (
     <div className=" absolute top-0 right-0 h-[100vh] bg-white lg:w-[450px] w-full duration-500 transition-all overflow-y-auto drop-shadow-lg z-50">
       <div className="flex justify-between lg:text-2xl text-2xl bg-[#2A2627]  sticky top-0 z-10">
@@ -97,18 +103,26 @@ const navigate =  useNavigate();
           to="/"
           className="bg-[#2A2627] w-full flex justify-center items-center lg:rounded-lg px-5 py-3"
         >
-          <div className="flex items-center">
+          <div className="flex items-center text-white">
             <FontAwesomeIcon
               icon={faBagShopping}
-              className="mr-3 bg-[#FF9197] text-white px-2 py-2 rounded-md "
+              className="mr-3 bg-[#FF9197] px-2 py-2 rounded-md "
             />
-            <p className="font-medium lg:text-base text-sm text-white">
-              Check Out
+            <p className="font-medium lg:text-base text-sm ">Check Out </p>
+            <FontAwesomeIcon
+              icon={faEquals}
+              className="ml-1 text-md text-[#FF9197]"
+            />
+            <FontAwesomeIcon
+              icon={faDollar}
+              className="m-1 text-md "
+            />
+            <p className="font-medium lg:text-lg  text-sm ">
+              {totalAmount.toFixed(2)}
             </p>
           </div>
         </Link>
       </div>
-      {/* Place order button */}
     </div>
   );
 };
