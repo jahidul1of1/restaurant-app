@@ -19,6 +19,7 @@ const SearchBar = () => {
             icon={faSliders}
             className=" text-gray-500 text-xl px-3"
           />
+          
         </div>
       </form>
     </div>

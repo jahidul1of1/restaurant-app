@@ -27,7 +27,7 @@ const ShoppingBag = ({ handleShowBag }) => {
                 0
               )
   return (
-    <div className=" absolute top-0 right-0 h-[100vh] bg-white lg:w-[450px] w-full duration-500 transition-all overflow-y-auto drop-shadow-lg z-50">
+    <div className=" absolute top-0 right-0 h-[100vh] bg-white lg:w-[450px] w-full duration-500 transition-all overflow-y-auto drop-shadow-lg z-50 scrollNone">
       <div className="flex justify-between lg:text-2xl text-2xl bg-[#2A2627]  sticky top-0 z-10">
         <button
           onClick={pathname === "/cart" ? () => navigate("/") : handleShowBag}
@@ -100,7 +100,7 @@ const ShoppingBag = ({ handleShowBag }) => {
       {/* Place order button */}
       <div className=" sticky bottom-0 w-full mt-auto">
         <Link
-          to="/"
+          to="/checkout"
           className="bg-[#2A2627] w-full flex justify-center items-center lg:rounded-lg px-5 py-3"
         >
           <div className="flex items-center text-white">

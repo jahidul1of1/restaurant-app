@@ -14,3 +14,23 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .scrollNone::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+} */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-track-hover {
+  background: #555;
+}
+body {
+  scroll-behavior: smooth;
+}
