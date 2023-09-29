@@ -29,9 +29,7 @@ const NavBar = () => {
 
         <MobileNav forMobile={"lg:block hidden"} />
         {showBag ? (
-         
             <ShoppingBag handleShowBag={handleShowBag} />
-          
         ) : null}
       </div>
     </MainSection>

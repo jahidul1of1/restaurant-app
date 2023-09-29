@@ -7,7 +7,7 @@ const Home = ({ children }) => {
   return (
     <>
       <NavBar />
-      
+
       <MainSection bgClasses={"bg-[#F0F0F0]"}>
         <SearchBar />
         <FoodMenue />

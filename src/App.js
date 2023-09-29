@@ -3,6 +3,7 @@ import "./App.css";
 import FoodDetails from "./componetn/FoodDetails";
 import Burgar from "./componetn/Pages/Burgar";
 import Cart from "./componetn/Pages/Cart";
+import CheckOut from "./componetn/Pages/CheckOut";
 import Drink from "./componetn/Pages/Drink";
 import Home from "./componetn/Pages/Home";
 import LogIn from "./componetn/Pages/Login";
@@ -68,9 +69,14 @@ function App() {
 
         <Route path="/foodDetail" element={<FoodDetails />} />
         <Route path="/Login" element={<LogIn />} />
+        <Route path="/checkout" element={<CheckOut />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+
+
+// for commit

@@ -108,6 +108,7 @@ export function FoodProvider({ children }) {
   return (
     <FoodContext.Provider
       value={{
+        showBag,
         cartItems,
         cartCounter,
         foodDetails,
@@ -116,7 +117,6 @@ export function FoodProvider({ children }) {
         quanitiyIncrement,
         quantityDecrement,
         handleFoodDetails,
-        showBag,
         handleShowBag,
         placeOrder,
       }}
